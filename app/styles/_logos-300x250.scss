@@ -1,0 +1,47 @@
+$neutrogena-logo-width: 74px;
+$neutrogena-logo-height: 32px;
+$neutrogena-logo-path: $image-path + 'logo_neutrogena.png';
+$neutrogena-logo-path-hires: $image-path + 'logo_neutrogena@2x.png';
+
+$neutrogena-lockup-width: 195px;
+$neutrogena-lockup-height: 26px;
+$neutrogena-lockup-path: $image-path + 'text_lockup.png';
+$neutrogena-lockup-path-hires: $image-path + 'text_lockup@2x.png';
+
+$neutrogena-lockup-fifa-width: 122px;
+$neutrogena-lockup-fifa-height: 44px;
+$neutrogena-lockup-fifa-path: $image-path + 'logo_lockup_fifa.png';
+$neutrogena-lockup-fifa-path-hires: $image-path + 'logo_lockup_fifa@2x.png';
+
+#mrVotePollContainer_uniqueID .logo {
+  position: relative;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  @include text-hide();
+
+  &.neutrogena {
+    float: left;
+    width: $neutrogena-logo-width;
+    height: $neutrogena-logo-height;
+    @include img-retina($neutrogena-logo-path, $neutrogena-logo-path-hires, $neutrogena-logo-width, $neutrogena-logo-height);
+  }
+
+  &.lockup {
+    float: left;
+    width: $neutrogena-lockup-width;
+    height: $neutrogena-lockup-height;
+    margin-top: ($neutrogena-header-height - $neutrogena-lockup-height) / 2;
+    margin-left: 10px;
+    @include img-retina($neutrogena-lockup-path, $neutrogena-lockup-path-hires, $neutrogena-lockup-width, $neutrogena-lockup-height);
+  }
+
+  &.lockup-fifa {
+    float: right;
+    margin-right: 15px;
+    width: $neutrogena-lockup-fifa-width;
+    height: $neutrogena-lockup-fifa-height;
+    @include img-retina($neutrogena-lockup-fifa-path, $neutrogena-lockup-fifa-path-hires, $neutrogena-lockup-fifa-width, $neutrogena-lockup-fifa-height);
+  }
+}

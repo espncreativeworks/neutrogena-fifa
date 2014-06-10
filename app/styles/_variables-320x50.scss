@@ -1,0 +1,14 @@
+$image-path: 'http://a.espncdn.com/creativeworks/neutrogena/images/';
+
+$neutrogena-blue: #4262af;
+$neutrogena-green: #83c346;
+$neutrogena-red: #cf343e;
+$neutrogena-orange: #f37c1c;
+
+$text-color: $neutrogena-blue;
+
+$neutrogena-font-family: 'open-sans-condensed';
+$ad-unit-width: 320px;
+$ad-unit-height: 50px;
+$neutrogena-logo-container-width: 84px;
+$neutrogena-content-container-width: $ad-unit-width - $neutrogena-logo-container-width;

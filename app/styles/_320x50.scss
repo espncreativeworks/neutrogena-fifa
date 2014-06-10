@@ -1,0 +1,263 @@
+#mrVotePoll_uniqueID {
+  width: $ad-unit-width;
+  height: $ad-unit-height;
+  position: relative;
+  overflow: hidden;
+  @include box-sizing(border-box);
+
+  * {
+    @include box-sizing(border-box);
+  }
+
+  *:before,
+  *:after {
+    @include box-sizing(border-box);
+  }
+
+  a > img {
+    border: none;
+  }
+
+  .disabled,
+  .hide {
+    display: none;
+  }
+
+  #mrVotePollContainer_uniqueID {
+    width: $ad-unit-width;
+    height: $ad-unit-height;
+    background-color: #fff;
+    position: relative;
+    font-family: $neutrogena-font-family, helvetica, arial, sans-serif;
+    color: $text-color;
+  }
+
+}
+
+/* votepoll */
+#mrVotePoll_uniqueID .mrContent {
+  width: $ad-unit-width;
+  height: $ad-unit-height;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  background-color: #fff;
+
+  .logo-container {
+    $bg-lines-path: $image-path + 'bg_lines.png';
+    $bg-lines-path-hires: $image-path + 'bg_lines@2x.png';
+
+    float: left;
+    width: $neutrogena-logo-container-width;
+    height: $ad-unit-height;
+    padding: 9px 5px;
+    background-image: url($image-path + 'bg_texture.png');
+    background-repeat: repeat;
+    background-position: 0 0;
+  }
+
+  .content-container {
+    float: left;
+    width: $neutrogena-content-container-width;
+    height: $ad-unit-height;
+    padding: 3px 10px;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .cta-copy {
+    color: $neutrogena-red;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+
+    a {
+      color: $neutrogena-red;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: $neutrogena-red;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .question {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: $neutrogena-blue;
+  }
+
+  hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid $neutrogena-blue;
+  }
+
+  .initial .option .bar {
+    display: none;
+    position: relative;
+  }
+
+  .initial .option .name {
+    display: inline;
+    position: relative;
+    width: auto;
+    top: auto;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+  }
+
+  .initial .option .numeric {
+    display: none;
+    float: left;
+    width: inherit;
+    height: auto;
+    margin-top: 0px;
+  }
+
+  .percent {
+    text-align: center;
+    color: #000;
+    font-size: 34px;
+    padding: 0px 10px;
+    margin-top: 0px;
+  }
+
+  .results {
+
+    .question {
+      display: none;
+    }
+
+    .options {
+      width: 70%;
+    }
+
+    .name {
+      display: inline-block;
+      float: left;
+      color: black;
+      line-height: 18px;
+      margin-right: 4px;
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+    .percent {
+      float: left;
+      color: $neutrogena-blue;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 18px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .leader .percent {
+      color: $neutrogena-green;
+    }
+
+    .cta-copy {
+      font-size: 8px;
+    }
+
+    hr.divider {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  }
+
+}
+
+#mrVotePoll_uniqueID .mrContent .options {
+  width: 80%;
+  height: 18px;
+  margin: 0 auto;
+}
+
+#mrVotePoll_uniqueID .mrContent .option {
+  width: auto;
+  height: auto;
+  text-align: center;
+  position: relative;
+  float: left;
+
+  &.option-1,
+  &.option-2 {
+    margin-left: 15px;
+  }
+
+  &.option-3,
+  &.option-4 {
+    display: none;
+  }
+}
+
+#mrVotePoll_uniqueID .mrContent .button {
+  display: inline-block;
+  width: 65px;
+  height: 15px;
+  padding: 0;
+  margin: 0;
+  background-color: $neutrogena-blue;
+  line-height: 12px;
+  font-size: 9px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  border-radius: 5px;
+  white-space: nowrap;
+  @include user-select(none);
+
+  &,
+  &:active,
+  &.active {
+    &:focus {
+      @include tab-focus();
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $neutrogena-green;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+    @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+    pointer-events: none; // Future-proof disabling of clicks
+    @include opacity(.65);
+    @include box-shadow(none);
+  }
+
+  .twitter {
+    display: none;
+    background: url("http://a.espncdn.com/i/ads/mr/assets/twitter_icon.png") no-repeat top center;
+    width: 14px;
+    height: 12px;
+    margin-right: 5px;
+  }
+}

@@ -1,0 +1,21 @@
+$neutrogena-logo-width: 74px;
+$neutrogena-logo-height: 32px;
+$neutrogena-logo-path: $image-path + 'logo_neutrogena.png';
+$neutrogena-logo-path-hires: $image-path + 'logo_neutrogena@2x.png';
+
+#mrVotePollContainer_uniqueID .logo {
+  position: relative;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  @include text-hide();
+
+  &.neutrogena {
+    float: left;
+    width: $neutrogena-logo-width;
+    height: $neutrogena-logo-height;
+    @include img-retina($neutrogena-logo-path, $neutrogena-logo-path-hires, $neutrogena-logo-width, $neutrogena-logo-height);
+  }
+
+}

@@ -1,0 +1,321 @@
+#mrVotePoll_uniqueID {
+  width: $ad-unit-width;
+  height: $ad-unit-height;
+  position: relative;
+  overflow: hidden;
+  @include box-sizing(border-box);
+
+  * {
+    @include box-sizing(border-box);
+  }
+
+  *:before,
+  *:after {
+    @include box-sizing(border-box);
+  }
+
+  a > img {
+    border: none;
+  }
+
+  .disabled,
+  .hide {
+    display: none;
+  }
+
+  #mrVotePollContainer_uniqueID {
+    width: $ad-unit-width;
+    height: $ad-unit-height;
+    background-repeat: repeat;
+    background-position: center;
+    background-image: url($image-path + 'bg_texture.png');
+    position: relative;
+    font-family: $neutrogena-font-family, helvetica, arial, sans-serif;
+    color: #fff;
+  }
+
+}
+
+/* ad info */
+#mrVotePoll_uniqueID .topAd {
+  $bg-lines-path: $image-path + 'bg_lines.png';
+  $bg-lines-path-hires: $image-path + 'bg_lines@2x.png';
+
+  width: $ad-unit-width;
+  height: $neutrogena-header-height;
+  padding: 0 10px 10px 10px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  @include img-retina($bg-lines-path, $bg-lines-path-hires, 300px, 45px);
+
+  #cta-title {
+    line-height: 45px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    float: right;
+  }
+}
+
+#mrVotePoll_uniqueID .bottomAd {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: $ad-unit-width;
+  height: $neutrogena-footer-height;
+  text-align: center;
+  color: #fff;
+  font-family: 'open-sans', helvetica, arial, sans-serif;
+  font-size: 6.5px;
+  line-height: $neutrogena-footer-height;
+  background-color: transparent;
+
+  p {
+    margin: 0;
+  }
+
+  .no-purchase {
+    text-transform: uppercase;
+  }
+}
+
+#mrVotePoll_uniqueID .bottomAd a:link,
+#mrVotePoll_uniqueID .bottomAd a:visited {
+  color: $neutrogena-green;
+  text-decoration: none;
+}
+
+/* votepoll */
+#mrVotePoll_uniqueID .mrContent {
+  position: absolute;
+  top: $neutrogena-header-height;
+  left: 0px;
+  width: $ad-unit-width;
+  height: $neutrogena-content-height;
+  padding-left: 100px;
+  padding-right: 10px;
+  padding-top: 10px;
+  background-color: #fff;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  @include img-retina($bg-landon-path, $bg-landon-path-hires, $bg-landon-width, $bg-landon-height);
+
+  .cta-copy {
+    color: $neutrogena-red;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+
+    a {
+      color: $neutrogena-red;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: $neutrogena-red;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .question {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: $neutrogena-blue;
+  }
+
+  hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid $neutrogena-blue;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+  }
+
+  .name-tag {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 100px;
+    height: 22px;
+    padding: 2.5px 10px;
+    @include gradient-horizontal($neutrogena-blue, transparentize($neutrogena-blue, 0.6));
+
+    .full-name,
+    .title {
+      position: relative;
+      display: block;
+      width: 100%;
+      text-transform: uppercase;
+    }
+
+    .full-name {
+      font-size: 9px;
+      line-height: 9px;
+      font-weight: bold;
+    }
+
+    .title {
+      font-size: 8px;
+      line-height: 8px;
+    }
+  }
+
+  .initial .option .bar {
+    display: none;
+    position: relative;
+  }
+
+  .initial .option .name {
+    display: inline;
+    position: relative;
+    width: auto;
+    top: auto;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+  }
+
+  .initial .option .numeric {
+    display: none;
+    float: left;
+    width: inherit;
+    height: auto;
+    margin-top: 0px;
+  }
+
+  .percent {
+    text-align: center;
+    color: #000;
+    font-size: 34px;
+    padding: 0px 10px;
+    margin-top: 0px;
+  }
+
+  .results {
+
+    .question {
+      display: none;
+    }
+
+    .name {
+      display: inline-block;
+      float: left;
+      color: black;
+      line-height: 40px;
+      margin-right: 4px;
+      font-size: 10px;
+      font-weight: bold;
+    }
+
+    .percent {
+      float: left;
+      color: $neutrogena-blue;
+      font-size: 26px;
+      font-weight: bold;
+      line-height: 40px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .leader .percent {
+      color: $neutrogena-green;
+    }
+  }
+
+}
+
+#mrVotePoll_uniqueID .mrContent .options {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+#mrVotePoll_uniqueID .mrContent .option {
+  width: auto;
+  height: auto;
+  text-align: center;
+  position: relative;
+  float: left;
+
+  &.option-2 {
+    margin-left: 15px;
+  }
+
+  &.option-3,
+  &.option-4 {
+    display: none;
+  }
+}
+
+#mrVotePoll_uniqueID .mrContent .button {
+  display: inline-block;
+  width: 65px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  background-color: $neutrogena-blue;
+  line-height: 30px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  border: 1px solid transparent;
+  border-radius: 5px;
+  white-space: nowrap;
+  @include user-select(none);
+
+  &,
+  &:active,
+  &.active {
+    &:focus {
+      @include tab-focus();
+    }
+  }
+
+  &:hover,
+  &:focus {
+    color: $neutrogena-green;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+    @include box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+    pointer-events: none; // Future-proof disabling of clicks
+    @include opacity(.65);
+    @include box-shadow(none);
+  }
+
+  .twitter {
+    display: none;
+    background: url("http://a.espncdn.com/i/ads/mr/assets/twitter_icon.png") no-repeat top center;
+    width: 14px;
+    height: 12px;
+    margin-right: 5px;
+  }
+}
